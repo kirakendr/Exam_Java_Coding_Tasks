@@ -8,17 +8,12 @@ public class Task6 {
         else
             return 0;
     }
-    // to count total number of vowel from 0 to n
     static int countVowels(String str, int n) {
         if (n == 1) return isVowel(str.charAt(n - 1));
         return countVowels(str, n - 1) + isVowel(str.charAt(n - 1));
     }
-    // Main Calling Function
     public static void main(String args[]) {
-        // string object
         String str = "documentation";
-
-        // Total numbers of Vowel
         System.out.print("Total number of Vowel = " + countVowels(str, str.length()));
     }
 }
